@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Search Page</h1>
+<form method="GET">
+    <input type="text" name="search_by_name_html" placeholder="Search By Name">
+    <button type="submit">Search</button>
+</form>
+<table class="table table-bordered text-center" border="1">
+  <thead>
+    <thead class="table-left">
+    <tr>
+      <th scope="col">Employee Number</th>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Employee Balance</th>
+      <th scope="col">Employee Hour Number</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+  <tbody>
+    
+    {% for emp in emp_info %}
+    <tr>
+      <td>{{ emp.emp_no }}</td>
+      <td>{{ emp.emp_name }}</td>
+      <td>{{ emp.emp_balance }}</td>
+      <td>{{ emp.emp_hour_no }}</td>
+        <td>
+            <a href="{% url 'edit' emp.id %}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'add' %}">Add</a>
+{% endblock %}
