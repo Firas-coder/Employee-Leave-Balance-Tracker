@@ -4,7 +4,7 @@ A Django-based system for tracking employee work hours and automatically deducti
 
 ## 📋 Overview
 
-This project tracks how many hours an employee works. Whenever an employee accumulates **6 hours**, it counts as **one full working day**, and that day is automatically **deducted from the employee's vacation/leave balance (رصيد الإجازات)**. This automates what would otherwise be a manual HR calculation.
+This project tracks how many hours an employee works. Whenever an employee accumulates **6 hours**, it counts as **one full working day**, and that day is automatically **deducted from the employee's vacation/leave balance. This automates what would otherwise be a manual HR calculation.
 
 ## ✨ Features
 
